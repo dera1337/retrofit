@@ -18,12 +18,12 @@ class MovieRepositoryImpl(
             val response = api.getPopularMovies(apiKey, page)
             val result = response.body()
             if (response.isSuccessful && result != null) {
-                Resource.Ok(result)
+                Resource.Ok(result, "Success get popular movies")
             } else {
-                Resource.Failed()
+                Resource.Failed("Unexpected error occured")
             }
         } catch (e: Exception) {
-            Resource.Failed()
+            Resource.Failed(e.message ?: "No internet connection")
         }
     }
 }

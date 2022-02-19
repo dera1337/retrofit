@@ -1,4 +1,4 @@
-package Retrofit.App
+package Retrofit.App.main
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

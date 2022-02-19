@@ -1,4 +1,4 @@
-package Retrofit.App
+package Retrofit.App.dependency_injection
 
 import Retrofit.App.Util.Constants.BASE_URL
 import Retrofit.App.api.MovieAPI

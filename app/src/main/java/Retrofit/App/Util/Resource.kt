@@ -1,8 +1,8 @@
 package Retrofit.App.Util
 
-sealed class Resource<T>(val data: T? = null) {
-    class Ok<T>(data: T) : Resource<T>(data)
-    class Failed<T> : Resource<T>()
+sealed class Resource<T>(val data: T? = null, val message: String) {
+    class Ok<T>(data: T, msg: String) : Resource<T>(data, msg)
+    class Failed<T>(msg: String) : Resource<T>(message = msg)
 }
 
 
